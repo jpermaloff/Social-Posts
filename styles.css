@@ -21,11 +21,17 @@ form {
 .formDisplay{
     display: none;
 }
-button {
+.newThoughts {
     width: 50%;
     justify-content: center;
     margin: 10px;
     border-radius: 5px;
+}
+.addPost {
+    justify-content: center;
+    margin: 10px;
+    border-radius: 5px;
+    width: 30%;
 }
 textarea {
     margin: 10px;

@@ -2,7 +2,7 @@
 const socialPosts = {
     template: `
 <h1>My Thoughts</h1>
-<button hide-form="hideForm();">New Thoughts</button>
+<button class="newThoughts" hide-form="$ctrl.hideForm();">New Thoughts</button>
 <post-form class="" on-submit="$ctrl.onSubmit(newPost);"></post-form>
 <section class="allPosts">
 <post delete-post="$ctrl.deletePost(index); 
