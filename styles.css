@@ -72,7 +72,7 @@ display: flex;
  right: 10px;
 top: 50%
 }
-input[type="text"].myFocus {  
+/* input[type="text"].myFocus {  
     height: 150px;
     width: 200%;
     font-size: 30px;  
@@ -89,5 +89,5 @@ textarea.myFocus {
 textarea.myBlur {  
     height: auto;
     width: auto;   
-} 
+}  */
  
