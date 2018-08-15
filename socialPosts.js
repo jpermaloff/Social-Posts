@@ -1,9 +1,10 @@
 " use strict";
+let form = false;
 const socialPosts = {
     template: `
 <h1>My Thoughts</h1>
-<button class="newThoughts" hide-form="$ctrl.hideForm();">New Thoughts</button>
-<post-form class="" on-submit="$ctrl.onSubmit(newPost);"></post-form>
+<button ng-show="$ctrl.toggleElements" class="newThoughts" ng-click="$ctrl.hideForm();">New Thoughts</button>
+<post-form ng-hide="$ctrl.toggleElements" on-submit="$ctrl.onSubmit(newPost);"></post-form>
 <section class="allPosts">
 <post delete-post="$ctrl.deletePost(index); 
 "post= "post"
@@ -23,14 +24,16 @@ ng-repeat="post in $ctrl.postList track by $index"></post>
                 subject: "Lorem ipsum dolor sit amet"
             }
         ];
+        vm.toggleElements = true;
         vm.onSubmit = (newPost) => {
             vm.postList.unshift(angular.copy(newPost));
+            vm.toggleElements = true;
         };
         vm.deletePost = (index) => {
             vm.postList.splice(index, 1);
         };
         vm.hideForm = () => {
-            console.log("hi");
+            vm.toggleElements = false;
         }
     }
 };
